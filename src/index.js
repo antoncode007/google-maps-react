@@ -160,7 +160,7 @@ export class Map extends React.Component {
         });
 
         this.map = new maps.Map(node, mapConfig);
-
+        this.map.setOptions({scrollwheel:false})
         evtNames.forEach(e => {
           this.listeners[e] = this.map.addListener(e, this.handleEvent(e));
         });
